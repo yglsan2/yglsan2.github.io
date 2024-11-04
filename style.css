@@ -78,7 +78,7 @@ h3 {
 
 .qrcode {
     width: 45px; /* Ajuste la taille du QR Code */
-    margin-bottom: 20px;
+    margin-bottom: 5px;
 }
 
 #email {
