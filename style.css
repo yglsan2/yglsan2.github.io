@@ -1,0 +1,148 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*police*/
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.left {
+    background-color: #2c3e50;
+    color: white;
+    width: 30%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.right {
+    background-color: #ecf0f1;
+    width: 70%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-top: 0;
+    font-weight: normal;
+    font-size: 24px;
+    color: #f1c40f;
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section-title {
+    color: #a7a793; /* Couleur douce pour les titres de section */
+    font-size: 20px; /* Taille augmentée */
+    margin-top: 20px; /* Marge pour l'espacement */
+    border-bottom: 1px solid #bdc3c7; /* Bordure inférieure pour séparer */
+    padding-bottom: 5px; /* Espacement entre le titre et le contenu */
+}
+
+h3 {
+    color: #a7a793; /* couleur appropriée pour mise en relief et harmonisation*/
+    font-size: 18px; /* Taille de police */
+    margin-top: 15px; /* Espacement avant le titre */
+    font-weight: bold; /* Mettre le texte en gras */
+}
+
+
+.left p, .right p {
+    margin: 5px 0;
+}
+
+.right .section {
+    border-bottom: 1px solid #bdc3c7;
+    padding-bottom: 15px;
+}
+
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.qrcode {
+    width: 100px; /* Ajuste la taille du QR Code */
+    margin-bottom: 20px;
+}
+
+#email {
+font-size : 0.85em
+
+}
+
+/* media queries d'impression*/ 
+
+@media print {
+/*le titre ne doit pas être coupé et doit toujours être au début, media query qui ne marche pas ici, mais qui est utile de connaître */
+  /* h1{ page-break-before:always; }  */
+    
+   /*config body*/ 
+
+   body{ html{ font-size: 7.5pt; 
+}
+   body{ font-size: 12pt; 
+}
+            } 
+
+    p{
+    orphans: 3;
+    widows: 3;
+            }
+/*éviter les coupures de pages */
+blockquote, ul, ol{
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+/* pas de coupure de page après ces éléments */
+h1, h2, h3, h4, h5, h6, caption{
+    page-break-after: avoid;
+    break-after: avoid;
+}
+
+/* options activables  (permettent d'ajouter des éléments à imprimer et à ne pas imprimer, 
+!important permet de rendre l'opération prioritaire, pour éviter que la commande soit invisible*/
+@media print{
+    .print{ 
+        display: none !important;
+
+    .noprint{ display: none !important; }
+}
+@media not print{
+    .printonly{ display: none !important; }
+}
+
+
+
+
+/* Options d'impression :  <div class="noprint"> visible tout le temps, sauf à l'impression.</div>
+<div class="printonly"> visible qu'à l'impression.</div>*/
+
+
+/* supprimer les éventuelles préconfigurations des navigateurs qui suppriment des actions d'impression par défaut*/ 
+*{
+   
+   text-shadow: none !important;
+}
+
+/*améliorer les contrastes d'impression, notamment pour les couleurs ou les éventuelles photos*/ 
+      img{
+        filter: contrast(150%) brightness(120%)
+      }
+
+}
