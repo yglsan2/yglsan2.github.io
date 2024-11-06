@@ -1,5 +1,5 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -7,32 +7,26 @@ body {
 
 .container {
     display: flex;
-    max-width: 1200px;
-    margin: 20px auto;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.left {
-    background-color: #2c3e50;
-    color: white;
-    width: 30%;
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-}
-
-.right {
-    background-color: #ecf0f1;
-    color: #2c3e50;
-    width: 70%;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding: 20px;
     box-sizing: border-box;
 }
 
-.left h1 {
-    text-align: center;
+.left, .right {
+    width: 48%;
+    background-color: #fff;
+    padding: 20px;
+    box-sizing: border-box;
     margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.name {
+    color: #f39c12;  /* Jaune */
+    text-align: center;
+    font-size: 36px;
 }
 
 .contact-info p {
@@ -40,26 +34,28 @@ body {
     font-size: 16px;
 }
 
-.contact-info .phone-number,
-.contact-info .email-part {
-    display: inline;
+.phone-number {
+    color: #2980b9;  /* Bleu clair */
+}
+
+.email-part {
+    color: #f39c12;  /* Jaune */
 }
 
 .qrcode {
-    width: 80px;
-    height: 80px;
-    margin-top: 20px;
-    align-self: center;
-}
-
-.section {
-    margin-bottom: 20px;
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .section-title {
     font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
+    color: #2980b9;  /* Bleu clair */
 }
 
 ul {
@@ -71,36 +67,23 @@ ul li {
     margin: 5px 0;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
     }
 
-    .left {
-        width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .right {
+    .left, .right {
         width: 100%;
     }
 
-    #email {
-        display: flex;
-        flex-direction: column;
-    }
-
+    #email .email-part,
     .phone-number {
         display: block;
-    }
-
-    .left h1 {
-        font-size: 24px;
+        margin: 10px 0;
     }
 
     .qrcode {
-        width: 60px;
-        height: 60px;
+        width: 80px;
+        height: 80px;
     }
 }
