@@ -1,45 +1,97 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
 
-/*Flex pour le Qr-code */
-.qrcode-container {
-    display:flex;
-    justify-content:center;
-    margin-bottom: 20px;
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.left {
+    background-color: #2c3e50;
+    color: white;
+    width: 30%;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.right {
+    background-color: #ecf0f1;
+    width: 70%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-top: 0;
+    font-weight: normal;
+    font-size: 24px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 20px;
+    color: #3498db;
+}
+
+h3 {
+    font-size: 16px;
+    color: #34495e;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-info p:first-child {
+    color: #f1c40f;
+    font-size: 1.05em;
+}
+
+.section-title {
+    font-size: 18px;
+    color: #3498db;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #3498db;
+}
+
+.section ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+.section ul li {
+    margin: 5px 0;
 }
 
 .qrcode {
-    width: 60px; /* Taille discrète */
-    height: auto; /* Conserve le ratio */
-    border: 1px solid #bdc3c7; /* Encadré subtil */
-    padding: 5px;
-    border-radius: 5px; /* Coins arrondis */
+    width: 50px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-/* Styles de base pour petits écrans */
-@media (max-width: 768px) {
+/* Responsivité et impression */
+@media print {
     .container {
-        flex-direction: column; /* Empile les sections */
-        width: 95%; /* Utilise toute la largeur */
-        margin: 10px auto;
+        display: flex;
+        flex-direction: column;
     }
-
     .left, .right {
-        width: 100%; /* Utilise 100% de la largeur de l'écran */
-        padding: 15px; /* Moins de padding */
-        box-shadow: none; /* Évite l'ombre */
+        width: 100%;
     }
-
-    .contact-info p, .section ul li, .right .section p {
-        font-size: 0.9em; /* Texte légèrement réduit */
+    .left {
+        padding-bottom: 40px;
     }
-
-    /* Optimisation de l'image QR sur mobile */
-    .qrcode {
-        width: 50px;
-        margin: 10px auto;
-        display: block; /* Centre le QR code */
-    }
-
-    h1 {
-        font-size: 20px; /* Ajustement du titre */
+    .right {
+        page-break-before: always;
+        padding-top: 20px;
     }
 }
