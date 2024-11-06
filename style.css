@@ -1,5 +1,5 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*police*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police */
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -13,16 +13,16 @@ body {
 }
 
 .left {
-    background-color: #2c3e50; /* Couleur de fond gauche */
+    background-color: #2c3e50; /* Couleur de fond de la colonne gauche */
     color: white; /* Texte blanc */
-    width: 30%;
+    width: 30%; /* Taille initiale de la colonne gauche */
     padding: 20px;
     box-sizing: border-box;
 }
 
 .right {
-    background-color: #ecf0f1; /* Couleur de fond droite */
-    width: 70%;
+    background-color: #ecf0f1; /* Couleur de fond de la colonne droite */
+    width: 70%; /* Taille initiale de la colonne droite */
     padding: 20px;
     box-sizing: border-box;
 }
@@ -53,7 +53,7 @@ h2 {
 }
 
 h3 {
-    color: #a7a793; /* couleur appropriée pour mise en relief et harmonisation*/
+    color: #a7a793; /* Couleur appropriée pour mise en relief et harmonisation */
     font-size: 18px; /* Taille de police */
     margin-top: 15px; /* Espacement avant le titre */
     font-weight: bold; /* Mettre le texte en gras */
@@ -88,9 +88,8 @@ h3 {
 }
 
 /* Media queries d'impression */
-
 @media print {
-    /*Le titre ne doit pas être coupé et doit toujours être au début*/
+    /* Le titre ne doit pas être coupé et doit toujours être au début */
     /* h1{ page-break-before:always; }  */
 
     /* Config body */
