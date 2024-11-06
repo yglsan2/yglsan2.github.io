@@ -1,5 +1,5 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*police*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -18,15 +18,89 @@ body {
     width: 30%;
     padding: 20px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
 
 .right {
     background-color: #ecf0f1;
+    color: #2c3e50;
     width: 70%;
     padding: 20px;
     box-sizing: border-box;
 }
 
-h1 {
-    margin-top: 0;
-    font-weight: normal;
+.left h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.contact-info .phone-number,
+.contact-info .email-part {
+    display: inline;
+}
+
+.qrcode {
+    width: 80px;
+    height: 80px;
+    margin-top: 20px;
+    align-self: center;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .right {
+        width: 100%;
+    }
+
+    #email {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .phone-number {
+        display: block;
+    }
+
+    .left h1 {
+        font-size: 24px;
+    }
+
+    .qrcode {
+        width: 60px;
+        height: 60px;
+    }
+}
