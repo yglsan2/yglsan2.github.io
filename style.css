@@ -1,5 +1,5 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*police*/
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -7,83 +7,133 @@ body {
 
 .container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    max-width: 1200px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.left {
+    background-color: #2c3e50; /* Couleur de fond gauche */
+    color: white; /* Texte blanc */
+    width: 30%;
     padding: 20px;
     box-sizing: border-box;
 }
 
-.left, .right {
-    width: 48%;
-    background-color: #fff;
+.right {
+    background-color: #ecf0f1; /* Couleur de fond droite */
+    width: 70%;
     padding: 20px;
     box-sizing: border-box;
+}
+
+h1 {
+    margin-top: 0;
+    font-weight: normal;
+    font-size: 24px;
+    color: #f1c40f; /* Jaune pour le nom et prénom */
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #3498db; /* Bleu clair pour les titres de la colonne gauche */
+}
+
+.section {
     margin-bottom: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.name {
-    color: #f39c12;  /* Jaune */
-    text-align: center;
-    font-size: 36px;
-}
-
-.contact-info p {
-    margin: 10px 0;
-    font-size: 16px;
-}
-
-.phone-number {
-    color: #2980b9;  /* Bleu clair */
-}
-
-.email-part {
-    color: #f39c12;  /* Jaune */
-}
-
-.qrcode {
-    display: block;
-    width: 100px;
-    height: 100px;
-    margin-top: 30px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .section-title {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #2980b9;  /* Bleu clair */
+    color: #a7a793; /* Couleur douce pour les titres de section */
+    font-size: 20px; /* Taille augmentée */
+    margin-top: 20px; /* Marge pour l'espacement */
+    border-bottom: 1px solid #bdc3c7; /* Bordure inférieure pour séparer */
+    padding-bottom: 5px; /* Espacement entre le titre et le contenu */
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+h3 {
+    color: #a7a793; /* couleur appropriée pour mise en relief et harmonisation*/
+    font-size: 18px; /* Taille de police */
+    margin-top: 15px; /* Espacement avant le titre */
+    font-weight: bold; /* Mettre le texte en gras */
 }
 
-ul li {
+.left p, .right p {
     margin: 5px 0;
 }
 
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
+.right .section {
+    border-bottom: 1px solid #bdc3c7;
+    padding-bottom: 15px;
+}
+
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.qrcode {
+    width: 25px; /* Ajuste la taille du QR Code */
+    margin-bottom: 5px;
+    font-size: 0.85em;
+}
+
+/* Couleur spécifique pour l'email */
+#email {
+    font-size: 0.85em;
+}
+
+/* Media queries d'impression */
+
+@media print {
+    /*Le titre ne doit pas être coupé et doit toujours être au début*/
+    /* h1{ page-break-before:always; }  */
+
+    /* Config body */
+    body { html{ font-size: 7.5pt; }
+    body{ font-size: 12pt; 
+    }
+    } 
+
+    p {
+        orphans: 3;
+        widows: 3;
     }
 
-    .left, .right {
-        width: 100%;
+    /* Eviter les coupures de pages */
+    blockquote, ul, ol {
+        page-break-inside: avoid;
+        break-inside: avoid;
     }
 
-    #email .email-part,
-    .phone-number {
-        display: block;
-        margin: 10px 0;
+    /* Pas de coupure de page après ces éléments */
+    h1, h2, h3, h4, h5, h6, caption {
+        page-break-after: avoid;
+        break-after: avoid;
     }
 
-    .qrcode {
-        width: 80px;
-        height: 80px;
+    /* Options activables (permettent d'ajouter des éléments à imprimer et à ne pas imprimer, !important permet de rendre l'opération prioritaire, pour éviter que la commande soit invisible) */
+    .print { 
+        display: none !important;
     }
+
+    .noprint { display: none !important; }
+}
+
+@media not print {
+    .printonly { display: none !important; }
+}
+
+/* Options d'impression */
+* {
+    text-shadow: none !important;
+}
+
+/* Améliorer les contrastes d'impression, notamment pour les couleurs ou les éventuelles photos */
+img {
+    filter: contrast(150%) brightness(120%);
 }
