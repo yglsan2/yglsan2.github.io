@@ -128,10 +128,7 @@ h3 {
         font-size: 0.85em;
     }
 
-    /* Eviter cassure*/
-    .Films {
-       break-inside: avoid; 
-    }
+    
     
     /* Centrage du QR code en bas de la colonne gauche */
     .qrcode {
