@@ -117,14 +117,14 @@ h3 {
     /* Email scindé en deux lignes */
     #email {
         display: block;
-        word-break: break-all;
+        white-space: pre-line; /* Force le retour à la ligne pour l'email */
         font-size: 0.85em;
     }
 
-    /* Alignement centré à gauche des rubriques sous les titres Langues, Loisirs, Lectures, Films */
+    /* Alignement des rubriques sous les titres Langues, Loisirs, Lectures, Films */
     .left p {
         text-align: left;
-        margin-left: 10px;
+        margin-left: 0px; /* Alignement plus à gauche */
     }
 
     /* Centrage du QR code en bas de la colonne gauche */
