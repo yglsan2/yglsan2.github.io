@@ -64,7 +64,6 @@ h3 {
 
 .left p, .right p {
     margin: 5px 0;
-    break-inside: avoid;
 }
 
 .right .section {
@@ -86,11 +85,7 @@ h3 {
     font-size: 0.85em;
 }
 
- p,
-  blockquote {
-    orphans: 5;
-    widows: 5;
-  }
+
 
 #email {
     font-size: 0.85em;
