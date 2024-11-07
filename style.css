@@ -111,8 +111,9 @@ h3 {
         box-sizing: border-box;
     }
 
-    figure {
-        break-inside: avoid-page; 
+    .no-break {
+    break-inside: avoid;
+
     }
 
     
