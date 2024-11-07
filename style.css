@@ -1,86 +1,47 @@
-/* Styles généraux */
+/* Styles globaux (version PC) */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    background-color: #f4f4f4;
+    background-color: #e9ecef; /* Teinte plus douce pour le fond */
 }
 
 .container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px;
-}
-
-/* Colonne gauche */
-.left {
-    width: 45%;
-    background-color: white;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.name {
-    font-size: 2em;
-    color: #333;
-    margin: 0;
-}
-
-.contact-info {
-    margin-top: 20px;
-}
-
-.phone, #email {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-}
-
-.phone-logo, .email-logo, .address-logo {
-    width: 1.2em;
-    height: auto;
-    margin-right: 10px;
-}
-
-.phone-logo {
-    content: url('path/to/phone-logo-white.svg'); /* Remplace avec le chemin de ton logo blanc */
-}
-
-.email-logo {
-    content: url('path/to/email-logo-white.svg'); /* Remplace avec le chemin de ton logo blanc */
-}
-
-.address-logo {
-    content: url('path/to/address-logo-white.svg'); /* Remplace avec le chemin de ton logo blanc */
-}
-
-.address {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-.address p {
-    margin: 0;
-    padding-left: 10px;
-}
-
-/* QR Code */
-.qrcode {
-    display: block;
+    max-width: 1200px;
     margin: 20px auto;
-    width: 100px;
-    height: 100px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15); /* Légère augmentation de l'ombre */
 }
 
-/* Colonne droite */
-.right {
-    width: 45%;
-    background-color: white;
+.left {
+    background-color: #243846; /* Teinte plus profonde pour le fond gauche */
+    color: #ffffff; /* Blanc plus net */
+    width: 30%;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right {
+    background-color: #f0f3f5; /* Légèrement plus doux que #ecf0f1 */
+    width: 70%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin-top: 0;
+    font-weight: normal;
+    font-size: 24px;
+    color: #f39c12; /* Teinte or plus lumineuse */
+}
+
+h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #2980b9; /* Bleu un peu plus saturé */
 }
 
 .section {
@@ -88,93 +49,88 @@ body {
 }
 
 .section-title {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #333;
-    margin-bottom: 10px;
+    color: #95a5a6; /* Teinte gris plus élégante */
+    font-size: 20px;
+    margin-top: 20px;
+    border-bottom: 1px solid #dfe6e9; /* Teinte douce pour le trait */
+    padding-bottom: 5px;
 }
 
-ul {
-    list-style-type: none;
-    padding-left: 20px;
-}
-
-ul li {
-    margin: 5px 0;
-}
-
-/* Profil */
-.profil-text {
-    margin-top: 10px;
-    color: #555;
-    line-height: 1.5;
-}
-
-/* Formations et Expérience */
 h3 {
-    font-size: 1.1em;
-    color: #333;
+    color: #7f8c8d; /* Gris subtil pour les titres de sous-sections */
+    font-size: 18px;
     margin-top: 15px;
+    font-weight: bold;
 }
 
-h4 {
-    font-size: 1em;
-    color: #333;
-}
-
-p {
+.left p, .right p {
     margin: 5px 0;
 }
 
-/* Footer (bas de page) */
-footer {
-    text-align: center;
-    font-size: 0.9em;
-    color: #777;
-    margin-top: 40px;
+.right .section {
+    border-bottom: 1px solid #dfe6e9; /* Ligne de séparation plus douce */
+    padding-bottom: 15px;
 }
 
-/* Media Queries pour mobile */
-@media screen and (max-width: 768px) {
+.contact-info {
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.qrcode {
+    width: 25px;
+    margin-bottom: 25px;
+    font-size: 0.85em;
+}
+
+#email {
+    font-size: 0.85em;
+}
+
+/* Media queries pour la version mobile et impression */
+@media (max-width: 768px) {
     .container {
-        flex-direction: column;
-        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
     }
 
-    .left, .right {
-        width: 90%;
-        margin-bottom: 20px;
+    .left {
+        width: 30%;
+        padding: 20px;
+        box-sizing: border-box;
     }
 
-    .name {
-        font-size: 1.5em;
+    .right {
+        width: 70%;
+        padding: 20px;
+        box-sizing: border-box;
     }
 
-    .phone-logo, .email-logo, .address-logo {
-        width: 1em;
+    .no-break {
+        break-inside: avoid;
     }
 
-    .qrcode {
-        width: 80px;
-        height: 80px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .name {
-        font-size: 1.2em;
-    }
-
+    /* Couleur des titres de section en bleu clair pour mobile et impression */
     .section-title {
-        font-size: 1.1em;
+        color: #3498db;
     }
 
-    .phone-logo, .email-logo, .address-logo {
-        width: 0.9em;
+    /* Email scindé en deux lignes */
+    #email {
+        display: block;
+        white-space: pre-line;
+        font-size: 0.85em;
     }
 
+    /* Centrage du QR code en bas de la colonne gauche */
     .qrcode {
-        width: 60px;
-        height: 60px;
+        margin-top: 50px;
+        margin-bottom: 25px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
