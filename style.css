@@ -1,136 +1,32 @@
-/* Styles globaux (version PC) */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Adresse - Correction de l'alignement et ajout du logo */
+.address {
+    display: flex;
+    align-items: center;
+}
+
+.address p {
     margin: 0;
-    padding: 0;
-    background-color: #e9ecef; /* Teinte plus douce pour le fond */
+    padding-left: 8px;
 }
 
-.container {
-    display: flex;
-    max-width: 1200px;
-    margin: 20px auto;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15); /* Légère augmentation de l'ombre */
+/* Correction de l'alignement des informations */
+.phone, #email {
+    margin: 10px 0;
 }
 
-.left {
-    background-color: #243846; /* Teinte plus profonde pour le fond gauche */
-    color: #ffffff; /* Blanc plus net */
-    width: 30%;
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.logo {
+    margin-right: 5px; 
+    font-size: 1.2em; /* Ajustement pour la taille du logo */
 }
 
-.right {
-    background-color: #f0f3f5; /* Légèrement plus doux que #ecf0f1 */
-    width: 70%;
-    padding: 20px;
-    box-sizing: border-box;
-}
-
-h1 {
-    margin-top: 0;
-    font-weight: normal;
-    font-size: 24px;
-    color: #f39c12; /* Teinte or plus lumineuse */
-}
-
-h2 {
-    font-size: 22px;
-    margin-bottom: 10px;
-    color: #2980b9; /* Bleu un peu plus saturé */
-}
-
-.section {
-    margin-bottom: 20px;
-}
-
-.section-title {
-    color: #95a5a6; /* Teinte gris plus élégante */
-    font-size: 20px;
-    margin-top: 20px;
-    border-bottom: 1px solid #dfe6e9; /* Teinte douce pour le trait */
-    padding-bottom: 5px;
-}
-
-h3 {
-    color: #7f8c8d; /* Gris subtil pour les titres de sous-sections */
-    font-size: 18px;
-    margin-top: 15px;
+.email-part {
     font-weight: bold;
 }
 
-.left p, .right p {
-    margin: 5px 0;
-}
-
-.right .section {
-    border-bottom: 1px solid #dfe6e9; /* Ligne de séparation plus douce */
-    padding-bottom: 15px;
-}
-
-.contact-info {
-    margin-bottom: 20px;
-}
-
-.contact-info p {
-    margin: 5px 0;
-}
-
 .qrcode {
-    width: 25px;
-    margin-bottom: 25px;
-    font-size: 0.85em;
+    display: block;
+    margin: 20px auto;
+    width: 100px;
+    height: 100px;
 }
 
-#email {
-    font-size: 0.85em;
-}
-
-/* Media queries pour la version mobile et impression */
-@media (max-width: 768px) {
-    .container {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .left {
-        width: 30%;
-        padding: 20px;
-        box-sizing: border-box;
-    }
-
-    .right {
-        width: 70%;
-        padding: 20px;
-        box-sizing: border-box;
-    }
-
-    .no-break {
-        break-inside: avoid;
-    }
-
-    /* Couleur des titres de section en bleu clair pour mobile et impression */
-    .section-title {
-        color: #3498db;
-    }
-
-    /* Email scindé en deux lignes */
-    #email {
-        display: block;
-        white-space: pre-line;
-        font-size: 0.85em;
-    }
-
-    /* Centrage du QR code en bas de la colonne gauche */
-    .qrcode {
-        margin-top: 50px;
-        margin-bottom: 25px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
