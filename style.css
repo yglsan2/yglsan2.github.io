@@ -112,7 +112,7 @@ h3 {
     }
 
     figure {
-        break-inside: avoid; 
+        break-inside: avoid-page; 
     }
 
     
