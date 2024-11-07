@@ -1,31 +1,29 @@
 /* Styles globaux (version PC) */
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e9ecef; /* Teinte plus douce pour le fond */
+    background-color: #f4f4f4;
 }
 
 .container {
     display: flex;
     max-width: 1200px;
     margin: 20px auto;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15); /* Légère augmentation de l'ombre */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .left {
-    background-color: #243846; /* Teinte plus profonde pour le fond gauche */
-    color: #ffffff; /* Blanc plus net */
+    background-color: #2c3e50;
+    color: white;
     width: 30%;
     padding: 20px;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .right {
-    background-color: #f0f3f5; /* Légèrement plus doux que #ecf0f1 */
+    background-color: #ecf0f1;
     width: 70%;
     padding: 20px;
     box-sizing: border-box;
@@ -35,13 +33,13 @@ h1 {
     margin-top: 0;
     font-weight: normal;
     font-size: 24px;
-    color: #f39c12; /* Teinte or plus lumineuse */
+    color: #f1c40f;
 }
 
 h2 {
     font-size: 22px;
     margin-bottom: 10px;
-    color: #2980b9; /* Bleu un peu plus saturé */
+    color: #3498db;
 }
 
 .section {
@@ -49,15 +47,15 @@ h2 {
 }
 
 .section-title {
-    color: #95a5a6; /* Teinte gris plus élégante */
+    color: #a7a793;
     font-size: 20px;
     margin-top: 20px;
-    border-bottom: 1px solid #dfe6e9; /* Teinte douce pour le trait */
+    border-bottom: 1px solid #bdc3c7;
     padding-bottom: 5px;
 }
 
 h3 {
-    color: #7f8c8d; /* Gris subtil pour les titres de sous-sections */
+    color: #a7a793;
     font-size: 18px;
     margin-top: 15px;
     font-weight: bold;
@@ -68,7 +66,7 @@ h3 {
 }
 
 .right .section {
-    border-bottom: 1px solid #dfe6e9; /* Ligne de séparation plus douce */
+    border-bottom: 1px solid #bdc3c7;
     padding-bottom: 15px;
 }
 
@@ -86,11 +84,14 @@ h3 {
     font-size: 0.85em;
 }
 
+
+
 #email {
     font-size: 0.85em;
 }
 
 /* Media queries pour la version mobile et impression */
+
 @media (max-width: 768px) {
     .container {
         display: flex;
@@ -110,9 +111,11 @@ h3 {
     }
 
     .no-break {
-        break-inside: avoid;
+    break-inside: avoid;
+
     }
 
+    
     /* Couleur des titres de section en bleu clair pour mobile et impression */
     .section-title {
         color: #3498db;
