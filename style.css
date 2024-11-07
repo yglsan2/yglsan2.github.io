@@ -107,7 +107,7 @@ h3 {
 
     .right {
         width: 70%;
-        padding: 10px;
+        padding: 20px;
         box-sizing: border-box;
     }
 
@@ -128,12 +128,12 @@ h3 {
         font-size: 0.85em;
     }
 
-    
-    
     /* Centrage du QR code en bas de la colonne gauche */
     .qrcode {
         margin-top: 20px;
         margin-bottom: 25px;
-        
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
