@@ -109,16 +109,22 @@ h3 {
         box-sizing: border-box;
     }
 
-    /* Couleur des titres en bleu clair uniquement pour mobile */
+    /* Couleur des titres de section en bleu clair pour mobile */
     .section-title {
         color: #3498db;
     }
 
-    /* Scindage de l'email sur deux lignes */
+    /* Email scindé en deux lignes */
     #email {
         display: block;
         word-break: break-all;
         font-size: 0.85em;
+    }
+
+    /* Alignement centré à gauche des rubriques sous les titres Langues, Loisirs, Lectures, Films */
+    .left p {
+        text-align: left;
+        margin-left: 10px;
     }
 
     /* Centrage du QR code en bas de la colonne gauche */
