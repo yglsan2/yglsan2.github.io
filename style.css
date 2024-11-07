@@ -100,7 +100,7 @@ h3 {
     }
 
     .left {
-        width: 30%;
+        width: 10%;
         padding: 10px;
         box-sizing: border-box;
     }
@@ -111,9 +111,9 @@ h3 {
         box-sizing: border-box;
     }
 
-    /*figure {
+    figure {
         break-inside: avoid-page; 
-    }*/
+    }
 
     
     /* Couleur des titres de section en bleu clair pour mobile et impression */
