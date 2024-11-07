@@ -64,7 +64,7 @@ h3 {
 
 .left p, .right p {
     margin: 5px 0;
-   
+    break-inside: avoid;
 }
 
 .right .section {
