@@ -20,6 +20,7 @@ body {
     width: 30%;
     padding: 20px;
     box-sizing: border-box;
+    text-align: center; /* Centrage pour toutes les rubriques */
 }
 
 .right {
@@ -63,6 +64,7 @@ h3 {
 
 .left p, .right p {
     margin: 5px 0;
+    text-align: center; /* Centrage des paragraphes pour toutes les rubriques de la colonne gauche */
 }
 
 .right .section {
@@ -117,14 +119,14 @@ h3 {
     /* Email scindé en deux lignes */
     #email {
         display: block;
-        white-space: pre-line; /* Force le retour à la ligne pour l'email */
+        white-space: pre-line;
         font-size: 0.85em;
     }
 
-    /* Alignement des rubriques sous les titres Langues, Loisirs, Lectures, Films */
+    /* Centrage des rubriques sous les titres Langues, Loisirs, Lectures, Films */
     .left p {
-        text-align: left;
-        margin-left: 0px; /* Alignement plus à gauche */
+        text-align: center; /* Centrage pour toutes les rubriques */
+        margin-left: 0;
     }
 
     /* Centrage du QR code en bas de la colonne gauche */
