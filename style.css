@@ -86,11 +86,17 @@ h3 {
     font-size: 0.85em;
 }
 
+ p,
+  blockquote {
+    orphans: 5;
+    widows: 5;
+  }
+
 #email {
     font-size: 0.85em;
 }
 
-/* Media queries pour la version mobile */
+/* Media queries pour la version mobile et impression */
 
 @media (max-width: 768px) {
     .container {
@@ -110,7 +116,7 @@ h3 {
         box-sizing: border-box;
     }
 
-    /* Couleur des titres de section en bleu clair pour mobile */
+    /* Couleur des titres de section en bleu clair pour mobile et impression */
     .section-title {
         color: #3498db;
     }
