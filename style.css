@@ -20,6 +20,7 @@ body {
     width: 30%;
     padding: 20px;
     box-sizing: border-box;
+    justify-content: space-between;
 }
 
 .right {
