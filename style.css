@@ -111,6 +111,11 @@ h3 {
         box-sizing: border-box;
     }
 
+    figure {
+        break-inside: avoid; 
+    }
+
+    
     /* Couleur des titres de section en bleu clair pour mobile et impression */
     .section-title {
         color: #3498db;
