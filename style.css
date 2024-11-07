@@ -92,28 +92,33 @@ h3 {
 
 @media (max-width: 768px) {
     .container {
-        flex-direction: column;
+        display: flex;
+        flex-wrap: wrap;
     }
 
     .left {
-        width: 100%;
-        padding: 15px;
-        text-align: center; /* Centrage du contenu pour la version mobile */
+        width: 30%;
+        padding: 10px;
+        box-sizing: border-box;
     }
 
     .right {
-        width: 100%;
-        padding: 15px;
+        width: 70%;
+        padding: 10px;
+        box-sizing: border-box;
     }
 
+    /* Ajustement de la couleur des titres en bleu clair uniquement pour mobile */
     .section-title {
-        color: #3498db; /* Changement en bleu clair pour les titres en version mobile */
+        color: #3498db;
     }
 
+    /* Centrage du QR code en bas de la colonne gauche */
     .qrcode {
         margin-top: 20px;
         margin-bottom: 0;
-        align-self: center; /* Centrage du QR code en bas */
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
-
