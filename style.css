@@ -1,26 +1,37 @@
-/* Adresse - Correction de l'alignement et ajout du logo */
+/* Style pour les logos blancs */
+.phone-logo {
+    content: url('path/to/phone-logo.svg'); /* Remplace par le chemin vers ton logo blanc du téléphone */
+    width: 1.2em;
+    height: auto;
+}
+
+.email-logo {
+    content: url('path/to/email-logo.svg'); /* Remplace par le chemin vers ton logo blanc de l'email */
+    width: 1.2em;
+    height: auto;
+}
+
+.address-logo {
+    content: url('path/to/address-logo.svg'); /* Remplace par le chemin vers ton logo blanc de l'adresse */
+    width: 1.2em;
+    height: auto;
+}
+
+/* Correction du flex pour l'alignement de l'adresse */
 .address {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
 }
 
 .address p {
     margin: 0;
-    padding-left: 8px;
+    padding-left: 10px;
 }
 
-/* Correction de l'alignement des informations */
+/* Ajustement de l'alignement des autres informations */
 .phone, #email {
     margin: 10px 0;
-}
-
-.logo {
-    margin-right: 5px; 
-    font-size: 1.2em; /* Ajustement pour la taille du logo */
-}
-
-.email-part {
-    font-weight: bold;
 }
 
 .qrcode {
@@ -29,4 +40,3 @@
     width: 100px;
     height: 100px;
 }
-
