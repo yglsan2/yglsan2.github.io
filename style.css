@@ -1,23 +1,61 @@
-/* Style pour les logos blancs */
-.phone-logo {
-    content: url('path/to/phone-logo.svg'); /* Remplace par le chemin vers ton logo blanc du téléphone */
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/* Colonne gauche */
+.left {
+    width: 45%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.name {
+    font-size: 2em;
+    color: #333;
+    margin: 0;
+}
+
+.contact-info {
+    margin-top: 20px;
+}
+
+.phone, #email {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.phone-logo, .email-logo, .address-logo {
     width: 1.2em;
     height: auto;
+    margin-right: 10px;
+}
+
+.phone-logo {
+    content: url('path/to/phone-logo-white.svg'); /* Remplace avec le chemin de ton logo blanc */
 }
 
 .email-logo {
-    content: url('path/to/email-logo.svg'); /* Remplace par le chemin vers ton logo blanc de l'email */
-    width: 1.2em;
-    height: auto;
+    content: url('path/to/email-logo-white.svg'); /* Remplace avec le chemin de ton logo blanc */
 }
 
 .address-logo {
-    content: url('path/to/address-logo.svg'); /* Remplace par le chemin vers ton logo blanc de l'adresse */
-    width: 1.2em;
-    height: auto;
+    content: url('path/to/address-logo-white.svg'); /* Remplace avec le chemin de ton logo blanc */
 }
 
-/* Correction du flex pour l'alignement de l'adresse */
 .address {
     display: flex;
     align-items: center;
@@ -29,14 +67,114 @@
     padding-left: 10px;
 }
 
-/* Ajustement de l'alignement des autres informations */
-.phone, #email {
-    margin: 10px 0;
-}
-
+/* QR Code */
 .qrcode {
     display: block;
     margin: 20px auto;
     width: 100px;
     height: 100px;
+}
+
+/* Colonne droite */
+.right {
+    width: 45%;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+ul li {
+    margin: 5px 0;
+}
+
+/* Profil */
+.profil-text {
+    margin-top: 10px;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Formations et Expérience */
+h3 {
+    font-size: 1.1em;
+    color: #333;
+    margin-top: 15px;
+}
+
+h4 {
+    font-size: 1em;
+    color: #333;
+}
+
+p {
+    margin: 5px 0;
+}
+
+/* Footer (bas de page) */
+footer {
+    text-align: center;
+    font-size: 0.9em;
+    color: #777;
+    margin-top: 40px;
+}
+
+/* Media Queries pour mobile */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left, .right {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .name {
+        font-size: 1.5em;
+    }
+
+    .phone-logo, .email-logo, .address-logo {
+        width: 1em;
+    }
+
+    .qrcode {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .name {
+        font-size: 1.2em;
+    }
+
+    .section-title {
+        font-size: 1.1em;
+    }
+
+    .phone-logo, .email-logo, .address-logo {
+        width: 0.9em;
+    }
+
+    .qrcode {
+        width: 60px;
+        height: 60px;
+    }
 }
