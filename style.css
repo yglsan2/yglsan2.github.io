@@ -23,7 +23,11 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
-
+.adress {
+    display:flex;
+    align-items: center;
+    justify-content:flex-start; 
+}
 .right {
     background-color: #f0f3f5; /* Légèrement plus doux que #ecf0f1 */
     width: 70%;
