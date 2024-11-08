@@ -1,4 +1,4 @@
-/* Styles globaux (version PC) */
+/*Pour pc et grd écran */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -27,6 +27,8 @@ body {
     display:flex;
     align-items: center;
     justify-content:flex-start; 
+    flex-direction: column;
+    justify-content: space-between; 
 }
 .right {
     background-color: #f0f3f5; /* Légèrement plus doux que #ecf0f1 */
