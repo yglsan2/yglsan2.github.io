@@ -111,6 +111,7 @@ h3 {
 
     .no-break {
         break-inside: avoid;
+        break-inside: avoid-page;
     }
 
     /* Couleur des titres de section en bleu clair pour mobile et impression */
