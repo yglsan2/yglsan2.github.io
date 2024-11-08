@@ -3,19 +3,18 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e9ecef; /* Teinte plus douce pour le fond */
-}
+    background-color: #e9ecef;
 
 .container {
     display: flex;
     max-width: 1200px;
     margin: 20px auto;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15); /* Légère augmentation de l'ombre */
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15); /*ombre*/
 }
 
 .left {
-    background-color: #243846; /* Teinte plus profonde pour le fond gauche */
-    color: #ffffff; /* Blanc plus net */
+    background-color: #243846; /* couleur de gauche*/
+    color: #ffffff; /* amélioration de couleur blanche */
     width: 30%;
     padding: 20px;
     box-sizing: border-box;
@@ -31,7 +30,7 @@ body {
     justify-content: space-between; 
 }
 .right {
-    background-color: #f0f3f5; /* Légèrement plus doux que #ecf0f1 */
+    background-color: #f0f3f5; /* couleur de fonds */
     width: 70%;
     padding: 20px;
     box-sizing: border-box;
@@ -41,13 +40,13 @@ h1 {
     margin-top: 0;
     font-weight: normal;
     font-size: 24px;
-    color: #f39c12; /* Teinte or plus lumineuse */
+    color: #f39c12; /*couleur de h1 */
 }
 
 h2 {
     font-size: 22px;
     margin-bottom: 10px;
-    color: #2980b9; /* Bleu un peu plus saturé */
+    color: #2980b9; /* couleur de h2 */
 }
 
 .section {
@@ -55,15 +54,15 @@ h2 {
 }
 
 .section-title {
-    color: #95a5a6; /* Teinte gris plus élégante */
+    color: #95a5a6; /* couleur tons de gris clair */
     font-size: 20px;
     margin-top: 20px;
-    border-bottom: 1px solid #dfe6e9; /* Teinte douce pour le trait */
+    border-bottom: 1px solid #dfe6e9; /* couleur de traits, claire */
     padding-bottom: 5px;
 }
 
 h3 {
-    color: #7f8c8d; /* Gris subtil pour les titres de sous-sections */
+    color: #7f8c8d; /* Gris clair pour les titres de sous-sections */
     font-size: 18px;
     margin-top: 15px;
     font-weight: bold;
@@ -74,7 +73,7 @@ h3 {
 }
 
 .right .section {
-    border-bottom: 1px solid #dfe6e9; /* Ligne de séparation plus douce */
+    border-bottom: 1px solid #dfe6e9; /* Ligne de séparation */
     padding-bottom: 15px;
 }
 
