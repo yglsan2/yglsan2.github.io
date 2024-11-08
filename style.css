@@ -1,5 +1,4 @@
-
-/* Partie principale (ordinateurs)*/
+/* Styles globaux (version PC) */
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -21,9 +20,6 @@ body {
     width: 30%;
     padding: 20px;
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
 }
 
 .right {
