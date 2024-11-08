@@ -9,7 +9,7 @@ body {
     display: flex;
     max-width: 1200px;
     margin: 20px auto;
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15); /*ombre*/
+  
 }
 
 .left {
