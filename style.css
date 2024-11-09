@@ -81,3 +81,64 @@ h3 {
 .contact-info {
     margin-bottom: 20px;
 }
+    .contact-info p {
+    margin: 5px 0;
+}
+
+.qrcode {
+    width: 25px;
+    margin-bottom: 25px;
+    font-size: 0.85em;
+}
+
+#email {
+    font-size: 0.85em;
+}
+
+/* Media queries pour la version mobile et impression */
+@media (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .left {
+        width: 30%;
+        padding: 10px;
+        box-sizing: border-box;
+        break-inside: avoid;
+        break-inside: avoid-page;
+    }
+
+    .right {
+        width: 70%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .no-break {
+        break-inside: avoid;
+        break-inside: avoid-page;
+    }
+
+    /* Couleur des titres de section en bleu clair pour mobile et impression */
+    .section-title {
+        color: #3498db;
+    }
+
+    /* Email scindé en deux lignes */
+    #email {
+        display: block;
+        white-space: pre-line;
+        font-size: 0.85em;
+    }
+
+    /* Centrage du QR code en bas de la colonne gauche */
+    .qrcode {
+        margin-top: 50px;
+        margin-bottom: 25px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
