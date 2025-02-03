@@ -1,5 +1,5 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*police*/
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Police générale */
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -18,6 +18,10 @@ body {
     width: 30%;
     padding: 20px;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Assure que les éléments restent alignés */
+    height: 100vh; /* Hauteur totale de l'écran */
 }
 
 .right {
@@ -52,12 +56,11 @@ h2 {
 }
 
 h3 {
-    color: #a7a793; /* couleur appropriée pour mise en relief et harmonisation*/
+    color: #a7a793; /* Couleur appropriée pour mise en relief et harmonisation */
     font-size: 18px; /* Taille de police */
     margin-top: 15px; /* Espacement avant le titre */
     font-weight: bold; /* Mettre le texte en gras */
 }
-
 
 .left p, .right p {
     margin: 5px 0;
@@ -76,73 +79,72 @@ h3 {
     margin: 5px 0;
 }
 
+/* QR Code positionné en bas */
+.qrcode-container {
+    text-align: center;
+    margin-top: auto; /* Force le QR code à se placer en bas */
+}
+
 .qrcode {
     width: 100px; /* Ajuste la taille du QR Code */
     margin-bottom: 20px;
 }
 
 #email {
-font-size : 0.85em
-
+    font-size: 0.85em;
 }
 
-/* media queries d'impression*/ 
-
+/* Media Queries d'impression */ 
 @media print {
-/*le titre ne doit pas être coupé et doit toujours être au début, media query qui ne marche pas ici, mais qui est utile de connaître */
-  /* h1{ page-break-before:always; }  */
-    
-   /*config body*/ 
+    /* Configuration pour impression */
+    html {
+        font-size: 7.5pt;
+    }
 
-   body{ html{ font-size: 7.5pt; 
-}
-   body{ font-size: 12pt; 
-}
-            } 
+    body {
+        font-size: 12pt;
+    }
 
-    p{
-    orphans: 3;
-    widows: 3;
-            }
-/*éviter les coupures de pages */
-blockquote, ul, ol{
-    page-break-inside: avoid;
-    break-inside: avoid;
-}
-/* pas de coupure de page après ces éléments */
-h1, h2, h3, h4, h5, h6, caption{
-    page-break-after: avoid;
-    break-after: avoid;
-}
+    p {
+        orphans: 3;
+        widows: 3;
+    }
 
-/* options activables  (permettent d'ajouter des éléments à imprimer et à ne pas imprimer, 
-!important permet de rendre l'opération prioritaire, pour éviter que la commande soit invisible*/
-@media print{
-    .print{ 
+    /* Éviter les coupures de pages */
+    blockquote, ul, ol {
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    /* Pas de coupure de page après ces éléments */
+    h1, h2, h3, h4, h5, h6, caption {
+        page-break-after: avoid;
+        break-after: avoid;
+    }
+
+    /* Options activables pour affichage spécifique à l'impression */
+    .print {
         display: none !important;
+    }
 
-    .noprint{ display: none !important; }
+    .noprint {
+        display: none !important;
+    }
+
+    @media not print {
+        .printonly {
+            display: none !important;
+        }
+    }
+
+    /* Supprimer les effets de style indésirables pour l'impression */ 
+    * {
+        text-shadow: none !important;
+    }
+
+    /* Améliorer les contrastes d'impression */ 
+    img {
+        filter: contrast(150%) brightness(120%);
+    }
 }
-@media not print{
-    .printonly{ display: none !important; }
-}
 
-
-
-
-/* Options d'impression :  <div class="noprint"> visible tout le temps, sauf à l'impression.</div>
-<div class="printonly"> visible qu'à l'impression.</div>*/
-
-
-/* supprimer les éventuelles préconfigurations des navigateurs qui suppriment des actions d'impression par défaut*/ 
-*{
-   
-   text-shadow: none !important;
-}
-
-/*améliorer les contrastes d'impression, notamment pour les couleurs ou les éventuelles photos*/ 
-      img{
-        filter: contrast(150%) brightness(120%)
-      }
-
-}
